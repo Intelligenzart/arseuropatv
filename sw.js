@@ -1,12 +1,11 @@
 /* =====================================================
    ARS EUROPA TV — Service Worker
-   Versione: 1.0
+   Versione: 1.1
    Strategia: Cache-first per assets statici,
    Network-first per la navigazione.
    YouTube e Google APIs sempre da rete.
 ===================================================== */
-
-const CACHE_NAME = 'ars-europa-tv-v1';
+const CACHE_NAME = 'ars-europa-tv-v2';
 const SHELL_ASSETS = [
   './',
   './index.html',
@@ -14,7 +13,6 @@ const SHELL_ASSETS = [
   './icon-192.png',
   './icon-512.png',
 ];
-
 /* ---- INSTALL ---- */
 self.addEventListener('install', event => {
   event.waitUntil(
@@ -24,7 +22,6 @@ self.addEventListener('install', event => {
   );
   self.skipWaiting();
 });
-
 /* ---- ACTIVATE ---- */
 self.addEventListener('activate', event => {
   event.waitUntil(
@@ -38,7 +35,6 @@ self.addEventListener('activate', event => {
   );
   self.clients.claim();
 });
-
 /* ---- FETCH ---- */
 const BYPASS_ORIGINS = [
   'youtube.com',
@@ -49,17 +45,13 @@ const BYPASS_ORIGINS = [
   'google.com',
   'fonts.gstatic.com',
 ];
-
 function shouldBypass(url) {
   return BYPASS_ORIGINS.some(origin => url.includes(origin));
 }
-
 self.addEventListener('fetch', event => {
   const url = event.request.url;
-
   /* Lascia passare tutto ciò che è YouTube/Google */
   if (shouldBypass(url)) return;
-
   /* Google Fonts: cache persistente (stale-while-revalidate) */
   if (url.includes('fonts.googleapis.com')) {
     event.respondWith(
@@ -75,7 +67,6 @@ self.addEventListener('fetch', event => {
     );
     return;
   }
-
   /* Navigazione (HTML) — network-first con fallback alla cache */
   if (event.request.mode === 'navigate') {
     event.respondWith(
@@ -89,7 +80,6 @@ self.addEventListener('fetch', event => {
     );
     return;
   }
-
   /* Tutto il resto — cache-first */
   event.respondWith(
     caches.match(event.request).then(cached => {
