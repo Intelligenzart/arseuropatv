@@ -432,24 +432,38 @@
 
 const schedules = {
 
-  0: [ // DOMENICA
+  // PALINSESTO SETTIMANALE COMPLETO - ARS EUROPA TV
+// Domenica (0) e Sabato (6) già presenti nel file originale.
+// Di seguito i cinque giorni mancanti: Lunedì (1), Martedì (2), Mercoledì (3), Giovedì (4), Venerdì (5).
+
+0: [ // DOMENICA
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+ 
   { time: "08:02", id: "LTmiNv4V0FM", title: "La lampada nell'Arte", tag: "Design" },
   { time: "08:14", id: "Gqmjecp3NTo", title: "La lampada e la Storia", tag: "Design" },
   { time: "08:24", id: "49NaNWgpT9c", title: "La lampada e la sua simbologia", tag: "Design" },
   { time: "08:32", id: "GuO9M2C4R-4", title: "La lampada e il design", tag: "Design" },
   { time: "08:39", id: "M7C3b1NSM7U", title: "La classe di danza - Edgar Degas", tag: "Arte & Simboli" },
   { time: "08:49", id: "bdrOIWKaZ0Y", title: "Pietro Lorenzetti - Beata Umiltà e storie della sua vita", tag: "Arte & Simboli" },
+ 
+  // ★ 09:00 — MITOLOGIA
   { time: "09:00", id: "0UOJdSzhFrI", title: "Teti - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:19", id: "jNGOdGlE7LQ", title: "La Lupa - I simboli e la storia di Roma", tag: "Mitologia" },
+ 
   { time: "09:27", id: "GbXpfJo-Z6Y", title: "Piero della Francesca - I duchi di Urbino", tag: "Arte & Simboli" },
   { time: "09:41", id: "Tuf5lu30V0M", title: "Pietro Cavallini - Giudizio Universale", tag: "Arte & Simboli" },
+ 
+  // ★ 10:00 — PHILOSOPHIA
   { time: "09:53", id: "pqFlJHOibGI", title: "Democrito e gli atomi - Philosophia", tag: "Filosofia" },
   { time: "10:04", id: "msTcwXQM3Qs", title: "Gorgia e la parola - Philosophia", tag: "Filosofia" },
+ 
   { time: "10:16", id: "vjejY2-VCFA", title: "Simbologia delle Sibille alla Cappella Sistina - Michelangelo", tag: "Arte & Simboli" },
   { time: "10:37", id: "jtStIm5z7II", title: "I consigli di Seneca - Amicizia", tag: "Letteratura" },
   { time: "10:44", id: "MAx6zDUILbQ", title: "Zenone e i suoi paradossi - Philosophia", tag: "Filosofia" },
+ 
+  // ★ 11:00 — TEATRO GRECO
   { time: "10:54", id: "TNlYUDPzZtg", title: "Andromaca - Euripide - Gli Immortali", tag: "Teatro Greco" },
+ 
   { time: "11:44", id: "ktou5tayO18", title: "Simbologia del Giudizio Universale di Michelangelo", tag: "Arte & Simboli" },
   { time: "12:05", id: "gW7A_NVA8h8", title: "Simbologia della Creazione di Adamo - Michelangelo", tag: "Arte & Simboli" },
   { time: "12:25", id: "KvpEM4bgfZY", title: "Anassagora e il Nous - Philosophia", tag: "Filosofia" },
@@ -461,27 +475,42 @@ const schedules = {
   { time: "13:25", id: "J47HGIAt7H0", title: "Giosuè ferma il sole - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "13:33", id: "a_sJka5SgjI", title: "Il dono di re Salomone - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "13:41", id: "abUpEQBf1b0", title: "Mene, Tekel, Peres - la mano fantasma - Storie dalla Bibbia", tag: "Sacrum" },
+ 
+  // ★ 14:00 — SIMBOLI NELL'ARTE
   { time: "13:51", id: "f6UQQmIgusI", title: "Significati nascosti nel Giardino delle delizie - Hieronymus Bosch", tag: "Arte & Simboli" },
+ 
   { time: "14:30", id: "Cn_F70P-77o", title: "Simbologia del Trittico delle Tentazioni di Sant'Antonio - Hieronymus Bosch", tag: "Arte & Simboli" },
   { time: "15:03", id: "zzbcMM2Bm8k", title: "Significati nascosti nel Parnaso - Andrea Mantegna", tag: "Arte & Simboli" },
   { time: "15:30", id: "FyOCxDBzYIE", title: "Simbologia delle sette Virtù - Pollaiolo e Botticelli", tag: "Arte & Simboli" },
+ 
+  // ★ 16:00 — SACRUM
   { time: "16:03", id: "BLDB2zuKUhA", title: "Eliseo, la vedova e l'olio - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:10", id: "dESyuomRI3E", title: "I profeti di Baal e il doppio olocausto - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:20", id: "_CrCTW4W41A", title: "Susanna e i vecchioni - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:31", id: "_RqV9r-Wm74", title: "Lo Spirito Santo nel Cristianesimo - Sacrum", tag: "Sacrum" },
   { time: "16:39", id: "Brwji6geGWQ", title: "Matteo, la mano dell'angelo - Tetramorfo", tag: "Tetramorfo" },
+ 
+  // ★ 17:00 — DECAMERON
   { time: "16:54", id: "wStQPVyWzuM", title: "Decameron - Ser Ciappelletto - I giornata I novella", tag: "Decameron" },
-  { time: "17:09", id: "_57OfZukJTs", title: "Decameron - Il Sultano Saladino e i tre anelli", tag: "Decameron" },
+  { time: "17:09", id: "_57OfZukJTs", title: "Decameron - Il Sultano Saladino e i tre anelli - I giornata III novella", tag: "Decameron" },
   { time: "17:20", id: "Ukb7enwrhmU", title: "Decameron - Martellino e il finto miracolo", tag: "Decameron" },
   { time: "17:30", id: "5D0qcufRzOw", title: "Decameron - Bergamino e l'avarizia di Cangrande", tag: "Decameron" },
   { time: "17:42", id: "egeEdEQFkT8", title: "Decameron - Il monaco e l'abate - I giornata IV novella", tag: "Decameron" },
+ 
+  // ★ 18:00 — SEMEION
   { time: "17:54", id: "LQVOt5DGEbc", title: "Giustiniano e il Corteo di Teodora in San Vitale", tag: "Arte & Simboli" },
   { time: "18:23", id: "H4YXia6yz-E", title: "Vita medievale - Semeion - 4ª puntata", tag: "Semeion" },
   { time: "18:58", id: "tmyoBjeOX_g", title: "Misteri dell'antica Grecia - Semeion - 3ª puntata", tag: "Semeion" },
   { time: "19:27", id: "hPWQR2BU49Y", title: "Religioni del Mediterraneo - Semeion - 6ª puntata", tag: "Semeion" },
+ 
+  // ★ 20:00 — DOCUMENTARIO LUNGO
   { time: "20:01", id: "EUKj2MyULiw", title: "Apocalisse: le ultime parole di Dio", tag: "Sacrum" },
+ 
   { time: "20:51", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
+ 
+  // ★ 21:30 — DIVINA COMMEDIA
   { time: "21:26", id: "ALRIE9NezPQ", title: "Inferno - Canto IX - La Divina Commedia", tag: "Divina Commedia" },
+ 
   { time: "21:38", id: "LBdvcDAlFjM", title: "Filottete - Sofocle - Gli Immortali", tag: "Teatro Greco" },
   { time: "22:11", id: "j-QqaWgK3rA", title: "I consigli di Marco Aurelio - Il giusto atteggiamento", tag: "Letteratura" },
   { time: "22:17", id: "vGut7h5Wlwc", title: "Orazio - Carpe Diem, afferra l'attimo", tag: "Poesia" },
@@ -500,25 +529,35 @@ const schedules = {
 
 1: [ // LUNEDÌ
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+
   { time: "08:02", id: "mNbR-hfE2gc", title: "Bronzino - Ritratto di Eleonora di Toledo", tag: "Arte & Simboli" },
   { time: "08:15", id: "VzG3biTZ1rg", title: "Agamennone - Eschilo - Gli Immortali", tag: "Teatro Greco" },
   { time: "08:31", id: "La8RbJbSL6U", title: "Pitagora e i numeri - Philosophia", tag: "Filosofia" },
   { time: "08:38", id: "dBcoGyxSSQ0", title: "Donatello - Maddalena penitente", tag: "Arte & Simboli" },
   { time: "08:47", id: "JIDwzu-phUo", title: "I consigli di Marco Aurelio - la cooperazione", tag: "Letteratura" },
   { time: "08:54", id: "bYT2Ok4r8qI", title: "Catullo - Dammi mille baci - Carme V", tag: "Letteratura" },
+
+  // ★ 09:00 — MITOLOGIA
   { time: "09:00", id: "hU_Bq30AsNM", title: "Europa - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:10", id: "33LYXRz6E5s", title: "Adone - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:20", id: "NGY1ZCjtirA", title: "L'egida, la capra Amaltea e la cornucopia", tag: "Mitologia" },
+
   { time: "09:27", id: "abUpEQBf1b0", title: "Mene, Tekel, Peres - la mano fantasma - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "09:37", id: "_57OfZukJTs", title: "Decameron - Il Sultano Saladino e i tre anelli", tag: "Decameron" },
-  { time: "09:48", id: "Vxbslrddq_c", title: "Maestro Venceslao - Dicembre nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
-  { time: "10:00", id: "Pkmfnn3KcWM", title: "Talete e l'acqua - I presocratici - Philosophia", tag: "Filosofia" },
-  { time: "10:10", id: "hIJjgqUb-8I", title: "Simbologia del Tondo Doni - Michelangelo", tag: "Arte & Simboli" },
-  { time: "10:23", id: "redrKZc2HoY", title: "I simboli dei Pellegrini nel Medioevo", tag: "Storia" },
-  { time: "10:31", id: "a_sJka5SgjI", title: "Il dono di re Salomone - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "10:39", id: "187m12rc8iE", title: "I simboli delle corporazioni medievali", tag: "Storia" },
-  { time: "10:49", id: "MAx6zDUILbQ", title: "Zenone e i suoi paradossi - Philosophia", tag: "Filosofia" },
+  { time: "09:37", id: "Vxbslrddq_c", title: "Maestro Venceslao - Dicembre nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
+  { time: "09:52", id: "hIJjgqUb-8I", title: "Simbologia del Tondo Doni - Michelangelo", tag: "Arte & Simboli" },
+
+  // ★ 10:00 — PHILOSOPHIA
+  { time: "10:05", id: "Pkmfnn3KcWM", title: "Talete e l'acqua - I presocratici - Philosophia", tag: "Filosofia" },
+  { time: "10:15", id: "MAx6zDUILbQ", title: "Zenone e i suoi paradossi - Philosophia", tag: "Filosofia" },
+
+  { time: "10:26", id: "redrKZc2HoY", title: "I simboli dei Pellegrini nel Medioevo", tag: "Storia" },
+  { time: "10:34", id: "187m12rc8iE", title: "I simboli delle corporazioni medievali", tag: "Storia" },
+  { time: "10:44", id: "a_sJka5SgjI", title: "Il dono di re Salomone - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "10:52", id: "jtStIm5z7II", title: "I consigli di Seneca - Amicizia", tag: "Letteratura" },
+
+  // ★ 11:00 — TEATRO GRECO
   { time: "11:00", id: "eSQcTSW5u50", title: "Alcesti - Euripide - Gli Immortali", tag: "Teatro Greco" },
+
   { time: "11:27", id: "SOqN2uepscY", title: "Eraclito e il fuoco - Philosophia", tag: "Filosofia" },
   { time: "11:36", id: "9BETjtp1mbA", title: "Parmenide e l'Essere - Philosophia", tag: "Filosofia" },
   { time: "11:43", id: "KvpEM4bgfZY", title: "Anassagora e il Nous - Philosophia", tag: "Filosofia" },
@@ -528,224 +567,320 @@ const schedules = {
   { time: "12:42", id: "vjejY2-VCFA", title: "Simbologia delle Sibille alla Cappella Sistina - Michelangelo", tag: "Arte & Simboli" },
   { time: "13:03", id: "ktou5tayO18", title: "Simbologia del Giudizio Universale di Michelangelo", tag: "Arte & Simboli" },
   { time: "13:24", id: "uaSEfOUDRDo", title: "Edipo Re - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "13:45", id: "jtStIm5z7II", title: "I consigli di Seneca - Amicizia", tag: "Letteratura" },
-  { time: "13:52", id: "J47HGIAt7H0", title: "Giosuè ferma il sole - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "14:00", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
-  { time: "14:35", id: "zzbcMM2Bm8k", title: "Significati nascosti nel Parnaso - Andrea Mantegna", tag: "Arte & Simboli" },
-  { time: "15:02", id: "FyOCxDBzYIE", title: "Simbologia delle sette Virtù - Pollaiolo e Botticelli", tag: "Arte & Simboli" },
-  { time: "15:35", id: "pqFlJHOibGI", title: "Democrito e gli atomi - Philosophia", tag: "Filosofia" },
-  { time: "15:46", id: "msTcwXQM3Qs", title: "Gorgia e la parola - Philosophia", tag: "Filosofia" },
-  { time: "16:00", id: "TvY6zNfDhqo", title: "Debora e l'incontro di Sisara e Giaele - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:07", id: "YDGpLW-lSrc", title: "Madian e i 300 di Gedeone - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:22", id: "BLDB2zuKUhA", title: "Eliseo, la vedova e l'olio - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:29", id: "dESyuomRI3E", title: "I profeti di Baal e il doppio olocausto - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:39", id: "_CrCTW4W41A", title: "Susanna e i vecchioni - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:50", id: "s6QnfgVPxZA", title: "I simboli dell'alchimia nel Medioevo", tag: "Storia" },
-  { time: "17:00", id: "wStQPVyWzuM", title: "Decameron - Ser Ciappelletto - I giornata I novella", tag: "Decameron" },
+  { time: "13:45", id: "J47HGIAt7H0", title: "Giosuè ferma il sole - Storie dalla Bibbia", tag: "Sacrum" },
+
+  // ★ 14:00 — SIMBOLI NELL'ARTE
+  { time: "13:53", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
+
+  { time: "14:28", id: "zzbcMM2Bm8k", title: "Significati nascosti nel Parnaso - Andrea Mantegna", tag: "Arte & Simboli" },
+  { time: "14:55", id: "FyOCxDBzYIE", title: "Simbologia delle sette Virtù - Pollaiolo e Botticelli", tag: "Arte & Simboli" },
+  { time: "15:28", id: "pqFlJHOibGI", title: "Democrito e gli atomi - Philosophia", tag: "Filosofia" },
+  { time: "15:39", id: "msTcwXQM3Qs", title: "Gorgia e la parola - Philosophia", tag: "Filosofia" },
+
+  // ★ 16:00 — SACRUM
+  { time: "15:51", id: "TvY6zNfDhqo", title: "Debora e l'incontro di Sisara e Giaele - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "15:58", id: "YDGpLW-lSrc", title: "Madian e i 300 di Gedeone - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:13", id: "BLDB2zuKUhA", title: "Eliseo, la vedova e l'olio - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:20", id: "dESyuomRI3E", title: "I profeti di Baal e il doppio olocausto - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:30", id: "_CrCTW4W41A", title: "Susanna e i vecchioni - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:41", id: "s6QnfgVPxZA", title: "I simboli dell'alchimia nel Medioevo", tag: "Storia" },
+
+  // ★ 17:00 — DECAMERON
+  { time: "16:49", id: "wStQPVyWzuM", title: "Decameron - Ser Ciappelletto - I giornata I novella", tag: "Decameron" },
+  { time: "17:04", id: "_57OfZukJTs", title: "Decameron - Il Sultano Saladino e i tre anelli - I giornata III novella", tag: "Decameron" },
   { time: "17:15", id: "Ukb7enwrhmU", title: "Decameron - Martellino e il finto miracolo", tag: "Decameron" },
   { time: "17:25", id: "TjARMj13bPE", title: "Decameron - Il corsaro Landolfo e la cassetta", tag: "Decameron" },
   { time: "17:34", id: "aWlHf7nx3Z8", title: "Decameron - San Giuliano, il mercante e la vedovella", tag: "Decameron" },
   { time: "17:43", id: "5D0qcufRzOw", title: "Decameron - Bergamino e l'avarizia di Cangrande", tag: "Decameron" },
   { time: "17:55", id: "egeEdEQFkT8", title: "Decameron - Il monaco e l'abate - I giornata IV novella", tag: "Decameron" },
+
+  // ★ 18:00 — SEMEION
   { time: "18:07", id: "H4YXia6yz-E", title: "Vita medievale - Semeion - 4ª puntata", tag: "Semeion" },
   { time: "18:42", id: "tmyoBjeOX_g", title: "Misteri dell'antica Grecia - Semeion - 3ª puntata", tag: "Semeion" },
   { time: "19:11", id: "LQVOt5DGEbc", title: "Giustiniano e il Corteo di Teodora in San Vitale", tag: "Arte & Simboli" },
-  { time: "19:40", id: "mwSAxNQ_re0", title: "Società dell'antica Roma - Semeion - 5ª puntata", tag: "Semeion" },
-  { time: "20:19", id: "8f5m0M3rmIA", title: "Giotto - Storie di San Francesco - Assisi - I Simboli nell'Arte", tag: "Arte & Simboli" },
-  { time: "21:30", id: "9Xo2rV75CBg", title: "Inferno - Canto I - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "21:45", id: "vGut7h5Wlwc", title: "Orazio - Carpe Diem, afferra l'attimo", tag: "Poesia" },
-  { time: "21:49", id: "tgaxKfngNCY", title: "Alessandro Manzoni - Sentir e meditar", tag: "Poesia" },
-  { time: "21:53", id: "HQqdZ18-UHA", title: "Giacomo Leopardi - L'Infinito", tag: "Poesia" },
-  { time: "21:57", id: "Y9ztKw9W1Sw", title: "I consigli di Platone - l'anima - Fedone", tag: "Letteratura" },
-  { time: "22:03", id: "4lD4LRrAHL8", title: "Cecco Angiolieri - S'i' fosse foco", tag: "Poesia" },
-  { time: "22:07", id: "1JTtwMU3W4c", title: "Cyrano de Bergerac - Edmond Rostand, Non, merci", tag: "Letteratura" },
-  { time: "22:15", id: "U5HuJnOl12s", title: "I consigli di Ovidio - il trucco femminile - Ars Amandi", tag: "Letteratura" },
-  { time: "22:22", id: "j-QqaWgK3rA", title: "I consigli di Marco Aurelio - Il giusto atteggiamento", tag: "Letteratura" },
-  { time: "22:28", id: "4JhzDRygmAI", title: "I consigli di Cicerone - il valore dell'amicizia", tag: "Letteratura" },
-  { time: "22:33", id: "LTmiNv4V0FM", title: "La lampada nell'Arte", tag: "Design" },
-  { time: "22:45", id: "Gqmjecp3NTo", title: "La lampada e la Storia", tag: "Design" },
-  { time: "22:55", id: "49NaNWgpT9c", title: "La lampada e la sua simbologia", tag: "Design" },
-  { time: "23:03", id: "GuO9M2C4R-4", title: "La lampada e il design", tag: "Design" },
-  { time: "23:10", id: "M7C3b1NSM7U", title: "La classe di danza - Edgar Degas", tag: "Arte & Simboli" },
-  { time: "23:20", id: "Tuf5lu30V0M", title: "Pietro Cavallini - Giudizio Universale", tag: "Arte & Simboli" },
-  { time: "23:32", id: "bdrOIWKaZ0Y", title: "Pietro Lorenzetti - Beata Umiltà e storie della sua vita", tag: "Arte & Simboli" },
-  { time: "23:43", id: "GbXpfJo-Z6Y", title: "Piero della Francesca - I duchi di Urbino", tag: "Arte & Simboli" },
+  { time: "19:41", id: "mwSAxNQ_re0", title: "Società dell'antica Roma - Semeion - 5ª puntata", tag: "Semeion" },
+
+  // ★ 20:00 — DOCUMENTARIO LUNGO
+  { time: "20:20", id: "8f5m0M3rmIA", title: "Giotto - Storie di San Francesco - Assisi - I Simboli nell'Arte", tag: "Arte & Simboli" },
+
+  { time: "21:05", id: "OIbMcxEIubc", title: "Giovanni di Paolo - Madonna col Bambino e Santi", tag: "Arte & Simboli" },
+  { time: "21:18", id: "9e4uCJAmljA", title: "Decameron - La dama di Guascogna e il re di Cipro", tag: "Decameron" },
+
+  // ★ 21:30 — DIVINA COMMEDIA
+  { time: "21:23", id: "HPgtfRKoH-4", title: "Inferno - Canto II - La Divina Commedia", tag: "Divina Commedia" },
+
+  { time: "21:35", id: "0Q3UHX75roM", title: "I consigli di Agostino - la felicità - le Confessioni", tag: "Letteratura" },
+  { time: "21:42", id: "vGut7h5Wlwc", title: "Orazio - Carpe Diem, afferra l'attimo", tag: "Poesia" },
+  { time: "21:46", id: "tgaxKfngNCY", title: "Alessandro Manzoni - Sentir e meditar", tag: "Poesia" },
+  { time: "21:50", id: "HQqdZ18-UHA", title: "Giacomo Leopardi - L'Infinito", tag: "Poesia" },
+  { time: "21:54", id: "Y9ztKw9W1Sw", title: "I consigli di Platone - l'anima - Fedone", tag: "Letteratura" },
+  { time: "22:00", id: "4lD4LRrAHL8", title: "Cecco Angiolieri - S'i' fosse foco", tag: "Poesia" },
+  { time: "22:04", id: "1JTtwMU3W4c", title: "Cyrano de Bergerac - Edmond Rostand, Non, merci", tag: "Letteratura" },
+  { time: "22:12", id: "U5HuJnOl12s", title: "I consigli di Ovidio - il trucco femminile - Ars Amandi", tag: "Letteratura" },
+  { time: "22:19", id: "j-QqaWgK3rA", title: "I consigli di Marco Aurelio - Il giusto atteggiamento", tag: "Letteratura" },
+  { time: "22:25", id: "4JhzDRygmAI", title: "I consigli di Cicerone - il valore dell'amicizia", tag: "Letteratura" },
+  { time: "22:30", id: "LTmiNv4V0FM", title: "La lampada nell'Arte", tag: "Design" },
+  { time: "22:42", id: "Gqmjecp3NTo", title: "La lampada e la Storia", tag: "Design" },
+  { time: "22:52", id: "49NaNWgpT9c", title: "La lampada e la sua simbologia", tag: "Design" },
+  { time: "23:00", id: "GuO9M2C4R-4", title: "La lampada e il design", tag: "Design" },
+  { time: "23:07", id: "M7C3b1NSM7U", title: "La classe di danza - Edgar Degas", tag: "Arte & Simboli" },
+  { time: "23:17", id: "Tuf5lu30V0M", title: "Pietro Cavallini - Giudizio Universale", tag: "Arte & Simboli" },
+  { time: "23:29", id: "bdrOIWKaZ0Y", title: "Pietro Lorenzetti - Beata Umiltà e storie della sua vita", tag: "Arte & Simboli" },
+  { time: "23:40", id: "GbXpfJo-Z6Y", title: "Piero della Francesca - I duchi di Urbino", tag: "Arte & Simboli" },
 ],
 
 2: [ // MARTEDÌ
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+
   { time: "08:02", id: "mVOIPZpLdDk", title: "Sandro Botticelli - Madonna col Bambino e due angeli", tag: "Arte & Simboli" },
   { time: "08:16", id: "yUEMOT8J8KU", title: "Giandomenico Tiepolo - Scena di Carnevale - Il minuetto", tag: "Arte & Simboli" },
-  { time: "08:32", id: "KIPYOCWYVSU", title: "Giovanni, lo sguardo dell'aquila", tag: "Tetramorfo" },
-  { time: "08:48", id: "T6_0Hzog4x0", title: "Luca, lo scriba della mansuetudine", tag: "Tetramorfo" },
+  { time: "08:32", id: "KIPYOCWYVSU", title: "Giovanni, lo sguardo dell'aquila - Tetramorfo", tag: "Tetramorfo" },
+  { time: "08:48", id: "T6_0Hzog4x0", title: "Luca, lo scriba della mansuetudine - Tetramorfo", tag: "Tetramorfo" },
+
+  // ★ 09:00 — MITOLOGIA
   { time: "09:01", id: "1zXxvYDhG4o", title: "Psiche - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:19", id: "0UOJdSzhFrI", title: "Teti - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:38", id: "8RHc0dwAVmE", title: "Orfeo - Simboli, miti e leggende", tag: "Mitologia" },
+
   { time: "09:53", id: "S80kNQbbpNk", title: "Anassimandro e l'apeiron - Philosophia", tag: "Filosofia" },
-  { time: "10:04", id: "1zSwyFPn4Yk", title: "Socrate - Philosophia", tag: "Filosofia" },
-  { time: "10:13", id: "5coSTdhVpuU", title: "Platone - Philosophia", tag: "Filosofia" },
-  { time: "10:26", id: "oqTUTClIW2I", title: "Aristotele - Philosophia", tag: "Filosofia" },
-  { time: "10:35", id: "QcN8IL5cGiI", title: "Crisippo e lo Stoicismo - Philosophia", tag: "Filosofia" },
-  { time: "10:48", id: "MYEi1LhYlo4", title: "Protagora e le antilogie - Philosophia", tag: "Filosofia" },
-  { time: "10:58", id: "GrqPGuz1N-A", title: "Antigone - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "11:25", id: "_5mO9eF7OzA", title: "Ifigenia in Tauride - Euripide - Gli Immortali", tag: "Teatro Greco" },
-  { time: "12:13", id: "k51U0SrGnN4", title: "Significati segreti della Pala Montefeltro - Piero della Francesca", tag: "Arte & Simboli" },
-  { time: "12:34", id: "WKNbx0R0UA4", title: "Hans Memling - Passione di Cristo", tag: "Arte & Simboli" },
-  { time: "12:46", id: "xCTDCGDexz4", title: "Jacopo di Cione - Polittico di San Pier Maggiore", tag: "Arte & Simboli" },
-  { time: "13:06", id: "5-BgoO5nwyM", title: "Andrea Mantegna - I trionfi di Giulio Cesare", tag: "Arte & Simboli" },
-  { time: "13:28", id: "rZMsiMAEY4s", title: "Simbologia della Morte della Vergine - Caravaggio", tag: "Arte & Simboli" },
-  { time: "13:49", id: "TE2IMczLzZ8", title: "Significati nascosti ne Le opere della Misericordia - Caravaggio", tag: "Arte & Simboli" },
-  { time: "14:07", id: "SAKj-fXPTig", title: "Significati dei simboli nella Camera degli Sposi - Andrea Mantegna", tag: "Arte & Simboli" },
-  { time: "14:47", id: "Db4RoAnOmQs", title: "Significati nascosti nella Madonna dei Pellegrini - Caravaggio", tag: "Arte & Simboli" },
-  { time: "15:01", id: "-76Y7rX1q3U", title: "Significati nascosti in Bacco - Caravaggio", tag: "Arte & Simboli" },
-  { time: "15:15", id: "WWy3GpSwbk0", title: "Simbologia del Martirio di San Matteo - Caravaggio", tag: "Arte & Simboli" },
-  { time: "15:46", id: "hnhA6JNWnZI", title: "Significato del Sacrificio di Isacco - Caravaggio", tag: "Arte & Simboli" },
-  { time: "15:56", id: "jeHmaJmp3wg", title: "Nehusthan, il serpente di bronzo - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:04", id: "7leFAVmV71Y", title: "Storie dalla Bibbia - Nehusthan, il serpente di bronzo", tag: "Sacrum" },
-  { time: "16:10", id: "rqf8m8WaTLM", title: "Simbologia di San Matteo e l'angelo - Caravaggio", tag: "Arte & Simboli" },
-  { time: "16:30", id: "_rfdWloavPE", title: "Simbologia della Natività con i santi Lorenzo e Francesco - Caravaggio", tag: "Arte & Simboli" },
-  { time: "16:46", id: "9K_bfj937Pg", title: "Decameron - Un mercante ebreo in Vaticano - I giornata II novella", tag: "Decameron" },
-  { time: "16:58", id: "PeDzAGHnkLw", title: "Decameron - Il frate avido e la brodaglia dei poveri", tag: "Decameron" },
-  { time: "17:07", id: "8tkD5HhoxYM", title: "Decameron - Chichibìo e la gru - VI giornata IV novella", tag: "Decameron" },
-  { time: "17:16", id: "ElM7rPK06k8", title: "Decameron - Come mandare il diavolo all'inferno - III giornata X novella", tag: "Decameron" },
-  { time: "17:27", id: "Vjes7xPZgo0", title: "Decameron - Calandrino incinto - IX giornata III novella", tag: "Decameron" },
-  { time: "17:39", id: "T9m9cm0dhWY", title: "Decameron - Come attaccare la coda a una cavalla - IX giornata X novella", tag: "Decameron" },
-  { time: "17:51", id: "h88VDynvAs0", title: "Decameron - Maestro Alberto e il porro - I giornata X novella", tag: "Decameron" },
-  { time: "18:00", id: "hPWQR2BU49Y", title: "Religioni del Mediterraneo - Semeion - 6ª puntata", tag: "Semeion" },
-  { time: "18:34", id: "eX13aqoGOqU", title: "Il mito dei Fenici - Semeion - 7ª puntata", tag: "Semeion" },
-  { time: "19:09", id: "q8-VMJW1r80", title: "Il tavolo - Sign&Design - 2ª puntata", tag: "Design" },
-  { time: "19:38", id: "2eNrA0pvehA", title: "La sedia - Sign&Design - 1ª puntata", tag: "Design" },
-  { time: "20:16", id: "EUKj2MyULiw", title: "Apocalisse: le ultime parole di Dio - Sacrum", tag: "Sacrum" },
-  { time: "21:06", id: "OIbMcxEIubc", title: "Giovanni di Paolo - Madonna col Bambino e Santi", tag: "Arte & Simboli" },
-  { time: "21:19", id: "9e4uCJAmljA", title: "Decameron - La dama di Guascogna e il re di Cipro", tag: "Decameron" },
-  { time: "21:24", id: "HPgtfRKoH-4", title: "Inferno - Canto II - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "21:36", id: "0Q3UHX75roM", title: "I consigli di Agostino - la felicità - le Confessioni", tag: "Letteratura" },
-  { time: "21:43", id: "g6kgO00YunM", title: "Simbologia della Cena in Emmaus - Caravaggio", tag: "Arte & Simboli" },
-  { time: "22:01", id: "wO56CDW3m-g", title: "Simbologia de La liberazione di san Pietro - Raffaello", tag: "Arte & Simboli" },
-  { time: "22:10", id: "3aUGhajRXBA", title: "Simbologia della Messa di Bolsena - Raffaello", tag: "Arte & Simboli" },
-  { time: "22:28", id: "_noxbELcGdc", title: "Simbologia del Pantheon di Roma", tag: "Storia" },
-  { time: "22:34", id: "EsbBvV7sU1k", title: "Simbologia di Riposo durante la fuga in Egitto - Caravaggio", tag: "Arte & Simboli" },
-  { time: "22:47", id: "0hpZAYhWJZc", title: "Significati nascosti nell'Allegoria della Prudenza - Tiziano", tag: "Arte & Simboli" },
-  { time: "22:59", id: "_n092qNIw7o", title: "La simbologia dello Scarabeo sacro nell'Antico Egitto", tag: "Storia" },
-  { time: "23:11", id: "vrCTJMpuRG8", title: "Simbologia del Paese della Cuccagna - Pieter Brueghel il Vecchio", tag: "Arte & Simboli" },
-  { time: "23:27", id: "i4hB8HMOSW8", title: "Giovanni Bellini - Polittico di San Vincenzo Ferrer", tag: "Arte & Simboli" },
-  { time: "23:45", id: "PbHxVDjfYW4", title: "Significati nascosti nella Allegoria Sacra - Giovanni Bellini", tag: "Arte & Simboli" },
+
+  // ★ 10:00 — PHILOSOPHIA
+  { time: "10:06", id: "1zSwyFPn4Yk", title: "Socrate - Philosophia", tag: "Filosofia" },
+  { time: "10:15", id: "5coSTdhVpuU", title: "Platone - Philosophia", tag: "Filosofia" },
+  { time: "10:28", id: "oqTUTClIW2I", title: "Aristotele - Philosophia", tag: "Filosofia" },
+  { time: "10:37", id: "QcN8IL5cGiI", title: "Crisippo e lo Stoicismo - Philosophia", tag: "Filosofia" },
+  { time: "10:50", id: "MYEi1LhYlo4", title: "Protagora e le antilogie - Philosophia", tag: "Filosofia" },
+
+  // ★ 11:00 — TEATRO GRECO
+  { time: "11:00", id: "GrqPGuz1N-A", title: "Antigone - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+
+  { time: "11:27", id: "_5mO9eF7OzA", title: "Ifigenia in Tauride - Euripide - Gli Immortali", tag: "Teatro Greco" },
+  { time: "12:15", id: "k51U0SrGnN4", title: "Significati segreti della Pala Montefeltro - Piero della Francesca", tag: "Arte & Simboli" },
+  { time: "12:36", id: "WKNbx0R0UA4", title: "Hans Memling - Passione di Cristo", tag: "Arte & Simboli" },
+  { time: "12:48", id: "xCTDCGDexz4", title: "Jacopo di Cione - Polittico di San Pier Maggiore", tag: "Arte & Simboli" },
+  { time: "13:08", id: "5-BgoO5nwyM", title: "Andrea Mantegna - I trionfi di Giulio Cesare", tag: "Arte & Simboli" },
+  { time: "13:30", id: "rZMsiMAEY4s", title: "Simbologia della Morte della Vergine - Caravaggio", tag: "Arte & Simboli" },
+  { time: "13:51", id: "TE2IMczLzZ8", title: "Significati nascosti ne Le Opere della Misericordia - Caravaggio", tag: "Arte & Simboli" },
+
+  // ★ 14:00 — SIMBOLI NELL'ARTE
+  { time: "14:09", id: "SAKj-fXPTig", title: "Significati dei simboli nella Camera degli Sposi - Andrea Mantegna", tag: "Arte & Simboli" },
+
+  { time: "14:49", id: "Db4RoAnOmQs", title: "Significati nascosti nella Madonna dei Pellegrini - Caravaggio", tag: "Arte & Simboli" },
+  { time: "15:03", id: "-76Y7rX1q3U", title: "Significati nascosti in Bacco - Caravaggio", tag: "Arte & Simboli" },
+  { time: "15:17", id: "WWy3GpSwbk0", title: "Simbologia del Martirio di San Matteo - Caravaggio", tag: "Arte & Simboli" },
+  { time: "15:48", id: "hnhA6JNWnZI", title: "Significato del Sacrificio di Isacco - Caravaggio", tag: "Arte & Simboli" },
+
+  // ★ 16:00 — SACRUM
+  { time: "15:58", id: "jeHmaJmp3wg", title: "Nehusthan, il serpente di bronzo - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:06", id: "7leFAVmV71Y", title: "Storie dalla Bibbia - Nehusthan", tag: "Sacrum" },
+  { time: "16:12", id: "rqf8m8WaTLM", title: "Simbologia di San Matteo e l'angelo - Caravaggio", tag: "Arte & Simboli" },
+  { time: "16:32", id: "_rfdWloavPE", title: "Simbologia della Natività con i santi Lorenzo e Francesco - Caravaggio", tag: "Arte & Simboli" },
+  { time: "16:48", id: "CJIyeaOe1M8", title: "I simboli sacri nel Medioevo", tag: "Storia" },
+
+  // ★ 17:00 — DECAMERON
+  { time: "16:57", id: "9K_bfj937Pg", title: "Decameron - Un mercante ebreo in Vaticano - I giornata II novella", tag: "Decameron" },
+  { time: "17:09", id: "PeDzAGHnkLw", title: "Decameron - Il frate avido e la brodaglia dei poveri", tag: "Decameron" },
+  { time: "17:18", id: "8tkD5HhoxYM", title: "Decameron - Chichibìo e la gru - VI giornata IV novella", tag: "Decameron" },
+  { time: "17:27", id: "ElM7rPK06k8", title: "Decameron - Come mandare il diavolo all'inferno - III giornata X novella", tag: "Decameron" },
+  { time: "17:38", id: "Vjes7xPZgo0", title: "Decameron - Calandrino incinto - IX giornata III novella", tag: "Decameron" },
+  { time: "17:50", id: "T9m9cm0dhWY", title: "Decameron - Come attaccare la coda a una cavalla - IX giornata X novella", tag: "Decameron" },
+
+  // ★ 18:00 — SEMEION
+  { time: "18:02", id: "hPWQR2BU49Y", title: "Religioni del Mediterraneo - Semeion - 6ª puntata", tag: "Semeion" },
+  { time: "18:36", id: "eX13aqoGOqU", title: "Il mito dei Fenici - Semeion - 7ª puntata", tag: "Semeion" },
+  { time: "19:11", id: "q8-VMJW1r80", title: "Il tavolo - Sign&Design - 2ª puntata", tag: "Design" },
+  { time: "19:40", id: "2eNrA0pvehA", title: "La sedia - Sign&Design - 1ª puntata", tag: "Design" },
+
+  // ★ 20:00 — DOCUMENTARIO LUNGO
+  { time: "20:18", id: "EUKj2MyULiw", title: "Apocalisse: le ultime parole di Dio", tag: "Sacrum" },
+
+  { time: "21:08", id: "g6kgO00YunM", title: "Simbologia della Cena in Emmaus - Caravaggio", tag: "Arte & Simboli" },
+  { time: "21:26", id: "wO56CDW3m-g", title: "Simbologia de La liberazione di san Pietro - Raffaello", tag: "Arte & Simboli" },
+
+  // ★ 21:30 — DIVINA COMMEDIA
+  { time: "21:35", id: "e82uw4hDYME", title: "Inferno - Canto III - La Divina Commedia", tag: "Divina Commedia" },
+
+  { time: "21:48", id: "3aUGhajRXBA", title: "Simbologia della Messa di Bolsena - Raffaello", tag: "Arte & Simboli" },
+  { time: "22:06", id: "_noxbELcGdc", title: "Simbologia del Pantheon di Roma", tag: "Storia" },
+  { time: "22:12", id: "EsbBvV7sU1k", title: "Simbologia di Riposo durante la fuga in Egitto - Caravaggio", tag: "Arte & Simboli" },
+  { time: "22:25", id: "0hpZAYhWJZc", title: "Significati nascosti nell'Allegoria della Prudenza - Tiziano", tag: "Arte & Simboli" },
+  { time: "22:37", id: "_n092qNIw7o", title: "La simbologia dello Scarabeo sacro nell'Antico Egitto", tag: "Storia" },
+  { time: "22:49", id: "vrCTJMpuRG8", title: "Simbologia del Paese della Cuccagna - Pieter Brueghel il Vecchio", tag: "Arte & Simboli" },
+  { time: "23:05", id: "i4hB8HMOSW8", title: "Giovanni Bellini - Polittico di San Vincenzo Ferrer", tag: "Arte & Simboli" },
+  { time: "23:23", id: "PbHxVDjfYW4", title: "Significati nascosti nella Allegoria Sacra - Giovanni Bellini", tag: "Arte & Simboli" },
+  { time: "23:42", id: "4MbscGhd_yw", title: "Bartolomé Bermejo - Trittico della Vergine di Montserrat", tag: "Arte & Simboli" },
 ],
 
 3: [ // MERCOLEDÌ
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+
   { time: "08:02", id: "2L2vi4hEwvI", title: "Cristo Cosmocratore - San Vitale a Ravenna - I Simboli nell'Arte", tag: "Arte & Simboli" },
   { time: "08:20", id: "xLiWCB2m9Jg", title: "I simboli sacerdotali nell'antica Roma", tag: "Storia" },
   { time: "08:31", id: "c4U77oicbuU", title: "Polisemantica - Il mondo in un segno - 3ª puntata", tag: "Semiotica" },
   { time: "08:41", id: "LIKOP__oc7I", title: "Giotto - Crocifisso di Padova", tag: "Arte & Simboli" },
+
+  // ★ 09:00 — MITOLOGIA
   { time: "09:03", id: "zOEB44h7S5k", title: "Medea - Euripide - Gli Immortali", tag: "Mitologia" },
   { time: "09:23", id: "jNGOdGlE7LQ", title: "La Lupa - I simboli e la storia di Roma", tag: "Mitologia" },
+
   { time: "09:31", id: "I9bfxWuUPSY", title: "Simbologia della Madonna della Seggiola - Raffaello", tag: "Arte & Simboli" },
   { time: "09:48", id: "3-Rc374qiAA", title: "Il matrimonio nell'antica Roma", tag: "Storia" },
+
+  // ★ 10:00 — PHILOSOPHIA
   { time: "09:58", id: "Q0NFO2Cs93U", title: "Anassimene e l'aria - I Presocratici - Philosophia", tag: "Filosofia" },
   { time: "10:06", id: "UolYSLet7rc", title: "Significato del Cristo morto - Andrea Mantegna", tag: "Arte & Simboli" },
-  { time: "10:21", id: "jid79a7Vzf0", title: "La simbologia delle insegne degli imperatori romani", tag: "Storia" },
-  { time: "10:32", id: "FsoXI_2VwNk", title: "Simbologia dell'Adorazione dei Magi - Sandro Botticelli", tag: "Arte & Simboli" },
-  { time: "10:51", id: "_RqV9r-Wm74", title: "Lo Spirito Santo nel Cristianesimo - Sacrum", tag: "Sacrum" },
-  { time: "10:59", id: "VNx-F7naSK0", title: "Elettra - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "11:34", id: "XCLbewnTJ9s", title: "I Coretti e le architetture illusorie di Giotto - Cappella degli Scrovegni", tag: "Arte & Simboli" },
-  { time: "11:48", id: "zrSkcpDgWuw", title: "La Cattedrale di Notre-Dame di Parigi - Luoghi, Simboli e Storia", tag: "Storia" },
-  { time: "11:59", id: "y9TG_ELB728", title: "Polisemantica - Il mondo in un segno - 1ª puntata", tag: "Semiotica" },
-  { time: "12:09", id: "Brwji6geGWQ", title: "Matteo, la mano dell'angelo - Tetramorfo", tag: "Tetramorfo" },
-  { time: "12:24", id: "7Y3g-9sAX2g", title: "Il segno del comando nell'Antica Roma", tag: "Storia" },
-  { time: "12:32", id: "wItqx4nm4HY", title: "Le origini del Teatro Greco", tag: "Storia" },
-  { time: "12:44", id: "K1F565ijk4E", title: "Simbologia di Pallade e il centauro - Sandro Botticelli", tag: "Arte & Simboli" },
-  { time: "12:55", id: "GAMo-3Ho2e8", title: "Significati nascosti nell'Anastasi - San Salvatore in Chora", tag: "Arte & Simboli" },
-  { time: "13:05", id: "EvTY-rqb1WY", title: "Significati dei simboli nella Theotókos di Vladimir", tag: "Arte & Simboli" },
-  { time: "13:15", id: "UU9BLVei6QU", title: "L'occhio di Horus - Antico Egitto - Semeion", tag: "Semeion" },
-  { time: "13:27", id: "bmc0TcDXIVs", title: "Maestro Venceslao - Giugno nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
-  { time: "13:42", id: "vGzv0sGe6F8", title: "Carlo Borromeo - Lo splendore dell'Umiltà", tag: "Arte & Simboli" },
-  { time: "14:05", id: "f6UQQmIgusI", title: "Significati nascosti nel Giardino delle delizie - Hieronymus Bosch", tag: "Arte & Simboli" },
-  { time: "14:44", id: "IjEmsqnsHKY", title: "L'invincibile esercito romano - Semeion", tag: "Semeion" },
-  { time: "15:14", id: "b0gBKKEZTA8", title: "Decameron - L'usuraio, l'abate e la fanciulla", tag: "Decameron" },
-  { time: "15:34", id: "4MbscGhd_yw", title: "Bartolomé Bermejo - Trittico della Vergine di Montserrat", tag: "Arte & Simboli" },
-  { time: "15:51", id: "CJIyeaOe1M8", title: "I simboli sacri nel Medioevo", tag: "Storia" },
-  { time: "16:00", id: "JlDzVj7QrZM", title: "Samuele e la voce misteriosa - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:10", id: "HkBxKcbf3hE", title: "Tobiolo e l'Angelo - Storie dalla Bibbia", tag: "Sacrum" },
-  { time: "16:35", id: "XfFiEQ2preg", title: "Giotto - Storie di San Francesco - Parte 3 di 3", tag: "Arte & Simboli" },
-  { time: "17:02", id: "YguWYzvu7Jk", title: "Decameron - Giuffredi, il figlio della Capriola", tag: "Decameron" },
-  { time: "17:22", id: "H9XFulxh-2Q", title: "Giotto - Maestà di Ognissanti - Uffizi", tag: "Arte & Simboli" },
-  { time: "18:05", id: "dly0X-1e3bo", title: "Il letto - Sign&Design - 3ª puntata", tag: "Design" },
-  { time: "18:39", id: "Cn_F70P-77o", title: "Simbologia del Trittico delle Tentazioni di Sant'Antonio - Hieronymus Bosch", tag: "Arte & Simboli" },
-  { time: "19:12", id: "EhsO8Dea9yM", title: "Ecuba - Euripide - Gli Immortali", tag: "Teatro Greco" },
-  { time: "19:57", id: "gJQIVbPVYx8", title: "Simbologia dell'Ultima Cena - Leonardo da Vinci", tag: "Arte & Simboli" },
-  { time: "20:46", id: "enm0U_D3EpE", title: "Eneide - La caduta di Troia - prima parte", tag: "Eneide" },
-  { time: "20:49", id: "4TXZ2pgdlb4", title: "Eneide - La caduta di Troia - Sinone", tag: "Eneide" },
-  { time: "20:54", id: "ssqpvt30tw4", title: "Eneide - La caduta di Troia - Laocoonte", tag: "Eneide" },
-  { time: "20:59", id: "w1nyMgzoZQE", title: "Eneide - La caduta di Troia - L'Incendio", tag: "Eneide" },
-  { time: "21:09", id: "Zr3BJG9najM", title: "Jacomart Baço - Madonna Virgo Advocata", tag: "Arte & Simboli" },
-  { time: "21:19", id: "5ice597_aGU", title: "Antonello da Messina - Crocifissione di Sibiu", tag: "Arte & Simboli" },
-  { time: "21:37", id: "e82uw4hDYME", title: "Inferno - Canto III - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "21:50", id: "TNlYUDPzZtg", title: "Andromaca - Euripide - Gli Immortali", tag: "Teatro Greco" },
-  { time: "22:40", id: "2Qk6T5F9k1M", title: "Significati nascosti nell'Annunciazione - Piero della Francesca", tag: "Arte & Simboli" },
-  { time: "22:45", id: "i4jGjxC-qbE", title: "Giotto - Storie di San Francesco - Parte 1 di 3", tag: "Arte & Simboli" },
+  { time: "10:21", id: "izDm-2nCABM", title: "Significati nascosti nella Madonna del Cardellino - Raffaello", tag: "Arte & Simboli" },
+  { time: "10:36", id: "p_XU7vqtsic", title: "Simbologia dello Sposalizio della Vergine - Raffaello", tag: "Arte & Simboli" },
+  { time: "10:52", id: "_RqV9r-Wm74", title: "Lo Spirito Santo nel Cristianesimo - Sacrum", tag: "Sacrum" },
+
+  // ★ 11:00 — TEATRO GRECO
+  { time: "11:00", id: "VNx-F7naSK0", title: "Elettra - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+
+  { time: "11:38", id: "XCLbewnTJ9s", title: "I Coretti e le architetture illusorie di Giotto - Cappella degli Scrovegni", tag: "Arte & Simboli" },
+  { time: "11:52", id: "zrSkcpDgWuw", title: "La Cattedrale di Notre-Dame di Parigi - Luoghi, Simboli e Storia", tag: "Storia" },
+  { time: "12:03", id: "y9TG_ELB728", title: "Polisemantica - Il mondo in un segno - 1ª puntata", tag: "Semiotica" },
+  { time: "12:13", id: "Brwji6geGWQ", title: "Matteo, la mano dell'angelo - Tetramorfo", tag: "Tetramorfo" },
+  { time: "12:28", id: "7Y3g-9sAX2g", title: "Il segno del comando nell'Antica Roma", tag: "Storia" },
+  { time: "12:36", id: "wItqx4nm4HY", title: "Le origini del Teatro Greco", tag: "Storia" },
+  { time: "12:48", id: "K1F565ijk4E", title: "Simbologia di Pallade e il centauro - Sandro Botticelli", tag: "Arte & Simboli" },
+  { time: "12:59", id: "GAMo-3Ho2e8", title: "Significati nascosti nell'Anastasi - San Salvatore in Chora", tag: "Arte & Simboli" },
+  { time: "13:09", id: "EvTY-rqb1WY", title: "Significati dei simboli nella Theotókos di Vladimir", tag: "Arte & Simboli" },
+  { time: "13:19", id: "UU9BLVei6QU", title: "L'occhio di Horus - Antico Egitto - Semeion", tag: "Semeion" },
+  { time: "13:33", id: "bmc0TcDXIVs", title: "Maestro Venceslao - Giugno nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
+  { time: "13:48", id: "vGzv0sGe6F8", title: "Carlo Borromeo - Lo splendore dell'Umiltà", tag: "Arte & Simboli" },
+
+  // ★ 14:00 — SIMBOLI NELL'ARTE
+  { time: "14:03", id: "f6UQQmIgusI", title: "Significati nascosti nel Giardino delle delizie - Hieronymus Bosch", tag: "Arte & Simboli" },
+
+  { time: "14:42", id: "IjEmsqnsHKY", title: "L'invincibile esercito romano - Semeion", tag: "Semeion" },
+  { time: "15:12", id: "b0gBKKEZTA8", title: "Decameron - L'usuraio, l'abate e la fanciulla", tag: "Decameron" },
+  { time: "15:32", id: "Cn_F70P-77o", title: "Simbologia del Trittico delle Tentazioni di Sant'Antonio - Hieronymus Bosch", tag: "Arte & Simboli" },
+
+  // ★ 16:00 — SACRUM
+  { time: "16:05", id: "JlDzVj7QrZM", title: "Samuele e la voce misteriosa - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:15", id: "HkBxKcbf3hE", title: "Tobiolo e l'Angelo - Storie dalla Bibbia", tag: "Sacrum" },
+  { time: "16:40", id: "XfFiEQ2preg", title: "Giotto - Storie di San Francesco - Parte 3 di 3", tag: "Arte & Simboli" },
+
+  // ★ 17:00 — DECAMERON
+  { time: "17:07", id: "YguWYzvu7Jk", title: "Decameron - Giuffredi, il figlio della Capriola", tag: "Decameron" },
+  { time: "17:27", id: "H9XFulxh-2Q", title: "Giotto - Maestà di Ognissanti - Uffizi", tag: "Arte & Simboli" },
+
+  // ★ 18:00 — SEMEION
+  { time: "18:10", id: "dly0X-1e3bo", title: "Il letto - Sign&Design - 3ª puntata", tag: "Design" },
+  { time: "18:44", id: "eX13aqoGOqU", title: "Il mito dei Fenici - Semeion - 7ª puntata", tag: "Semeion" },
+  { time: "19:19", id: "EhsO8Dea9yM", title: "Ecuba - Euripide - Gli Immortali", tag: "Teatro Greco" },
+
+  // ★ 20:00 — DOCUMENTARIO LUNGO
+  { time: "20:04", id: "gJQIVbPVYx8", title: "Simbologia dell'Ultima Cena - Leonardo da Vinci", tag: "Arte & Simboli" },
+
+  { time: "20:53", id: "enm0U_D3EpE", title: "Eneide - La caduta di Troia - prima parte", tag: "Eneide" },
+  { time: "20:56", id: "4TXZ2pgdlb4", title: "Eneide - La caduta di Troia - Sinone", tag: "Eneide" },
+  { time: "21:01", id: "ssqpvt30tw4", title: "Eneide - La caduta di Troia - Laocoonte", tag: "Eneide" },
+  { time: "21:06", id: "w1nyMgzoZQE", title: "Eneide - La caduta di Troia - L'Incendio", tag: "Eneide" },
+  { time: "21:16", id: "Zr3BJG9najM", title: "Jacomart Baço - Madonna Virgo Advocata", tag: "Arte & Simboli" },
+  { time: "21:26", id: "5ice597_aGU", title: "Antonello da Messina - Crocifissione di Sibiu", tag: "Arte & Simboli" },
+
+  // ★ 21:30 — DIVINA COMMEDIA
+  { time: "21:44", id: "og66tX93Mdg", title: "Inferno - Canto IV - La Divina Commedia", tag: "Divina Commedia" },
+
+  { time: "21:56", id: "TNlYUDPzZtg", title: "Andromaca - Euripide - Gli Immortali", tag: "Teatro Greco" },
+  { time: "22:46", id: "2Qk6T5F9k1M", title: "Significati nascosti nell'Annunciazione - Piero della Francesca", tag: "Arte & Simboli" },
+  { time: "22:51", id: "i4jGjxC-qbE", title: "Giotto - Storie di San Francesco - Parte 1 di 3", tag: "Arte & Simboli" },
 ],
 
 4: [ // GIOVEDÌ
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+
   { time: "08:02", id: "zoeXahpnNBA", title: "Maestro Venceslao - Novembre nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
   { time: "08:18", id: "e5UEQOsR85A", title: "Simbologia della Flagellazione di Cristo - Piero della Francesca", tag: "Arte & Simboli" },
   { time: "08:48", id: "05RV29HXOI8", title: "Significati nascosti nello Sposalizio della Vergine - Raffaello", tag: "Arte & Simboli" },
+
+  // ★ 09:00 — MITOLOGIA
   { time: "09:03", id: "-kT2WSjxw20", title: "L'ulivo, la civetta e il serpente - I Simboli e la Storia", tag: "Mitologia" },
+
   { time: "09:11", id: "VE1PrYiv1Vw", title: "Simbologia del Seppellimento di Santa Lucia - Caravaggio", tag: "Arte & Simboli" },
-  { time: "09:24", id: "fdy6LJOROCI", title: "Inferno - Canto XV - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "09:37", id: "ukXAsImHyDU", title: "Polisemantica - Il mondo in un segno - 2ª puntata", tag: "Semiotica" },
-  { time: "09:47", id: "DBRC_ndzw2o", title: "Significati nascosti nella Stanza della Segnatura - Raffaello", tag: "Arte & Simboli" },
-  { time: "10:34", id: "p-GGCkdDG7o", title: "Inferno - Canto XVI - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "10:46", id: "LBdvcDAlFjM", title: "Filottete - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "11:19", id: "gYZlbiG0Mk4", title: "Edipo a Colono - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "12:09", id: "3dRCGVNCmEo", title: "Inferno - Canto XVIII - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "12:22", id: "_YN4KrZiSjM", title: "Le Trachinie - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "12:51", id: "npJLE6PpIYU", title: "Inferno - Canto VI - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "13:03", id: "JxHiv1EbEXY", title: "Aiace - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "13:47", id: "FSYp-TK2qEk", title: "Inferno - Canto VIII - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "13:58", id: "WqOrir0fsxA", title: "Luca Signorelli - Storie degli Ultimi Giorni - I Simboli nell'Arte", tag: "Arte & Simboli" },
-  { time: "14:43", id: "vtJGNqiVUho", title: "Ippolito - Euripide - Gli Immortali", tag: "Teatro Greco" },
-  { time: "15:32", id: "WCwdo5eVABg", title: "Elettra - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "16:07", id: "ALRIE9NezPQ", title: "Inferno - Canto IX - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "16:20", id: "axRWC-PjjlI", title: "Inferno - Canto X - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "16:32", id: "WE4mzzXcPbo", title: "Inferno - Canto XI - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "16:42", id: "FyYCrzZPETI", title: "Inferno - Canto XII - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "16:55", id: "kjDXf0ndIWY", title: "Inferno - Canto XIII - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "17:10", id: "-_OiF7-GR0Q", title: "Inferno - Canto XIV - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "17:23", id: "dKTmwGpxC9g", title: "Inferno - Canto XVII - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "17:37", id: "H4YXia6yz-E", title: "Vita medievale - Semeion - 4ª puntata", tag: "Semeion" },
-  { time: "18:12", id: "mwSAxNQ_re0", title: "Società dell'antica Roma - Semeion - 5ª puntata", tag: "Semeion" },
-  { time: "18:51", id: "EUKj2MyULiw", title: "Apocalisse: le ultime parole di Dio", tag: "Sacrum" },
-  { time: "19:41", id: "tmyoBjeOX_g", title: "Misteri dell'antica Grecia - Semeion - 3ª puntata", tag: "Semeion" },
-  { time: "20:10", id: "JURq_FKWOR8", title: "La leggenda della Vera Croce - Piero della Francesca", tag: "Arte & Simboli" },
-  { time: "21:40", id: "og66tX93Mdg", title: "Inferno - Canto IV - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "21:52", id: "GrqPGuz1N-A", title: "Antigone - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "22:19", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
-  { time: "22:54", id: "SOqN2uepscY", title: "Eraclito e il fuoco - Philosophia", tag: "Filosofia" },
-  { time: "23:03", id: "uaSEfOUDRDo", title: "Edipo Re - Sofocle - Gli Immortali", tag: "Teatro Greco" },
-  { time: "23:24", id: "MAx6zDUILbQ", title: "Zenone e i suoi paradossi - Philosophia", tag: "Filosofia" },
-  { time: "23:34", id: "eSQcTSW5u50", title: "Alcesti - Euripide - Gli Immortali", tag: "Teatro Greco" },
+  { time: "09:24", id: "ukXAsImHyDU", title: "Polisemantica - Il mondo in un segno - 2ª puntata", tag: "Semiotica" },
+
+  // ★ 10:00 — PHILOSOPHIA: Raffaello e la Scuola di Atene
+  { time: "09:34", id: "DBRC_ndzw2o", title: "Significati nascosti nella Stanza della Segnatura - Raffaello", tag: "Arte & Simboli" },
+
+  { time: "10:21", id: "fdy6LJOROCI", title: "Inferno - Canto XV - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "10:34", id: "LBdvcDAlFjM", title: "Filottete - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+
+  // ★ 11:00 — TEATRO GRECO
+  { time: "11:07", id: "gYZlbiG0Mk4", title: "Edipo a Colono - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+
+  { time: "11:57", id: "3dRCGVNCmEo", title: "Inferno - Canto XVIII - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "12:10", id: "_YN4KrZiSjM", title: "Le Trachinie - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+  { time: "12:39", id: "npJLE6PpIYU", title: "Inferno - Canto VI - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "12:51", id: "JxHiv1EbEXY", title: "Aiace - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+  { time: "13:35", id: "p-GGCkdDG7o", title: "Inferno - Canto XVI - La Divina Commedia", tag: "Divina Commedia" },
+
+  // ★ 14:00 — SIMBOLI NELL'ARTE
+  { time: "13:47", id: "WqOrir0fsxA", title: "Luca Signorelli - Storie degli Ultimi Giorni - I Simboli nell'Arte", tag: "Arte & Simboli" },
+
+  { time: "14:32", id: "vtJGNqiVUho", title: "Ippolito - Euripide - Gli Immortali", tag: "Teatro Greco" },
+  { time: "15:21", id: "WCwdo5eVABg", title: "Elettra - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+
+  // ★ 16:00 — SACRUM: Vespri della Commedia
+  { time: "16:00", id: "ALRIE9NezPQ", title: "Inferno - Canto IX - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "16:13", id: "axRWC-PjjlI", title: "Inferno - Canto X - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "16:25", id: "WE4mzzXcPbo", title: "Inferno - Canto XI - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "16:35", id: "FyYCrzZPETI", title: "Inferno - Canto XII - La Divina Commedia", tag: "Divina Commedia" },
+
+  // ★ 17:00 — DECAMERON / LETTERATURA
+  { time: "16:49", id: "kjDXf0ndIWY", title: "Inferno - Canto XIII - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "17:04", id: "-_OiF7-GR0Q", title: "Inferno - Canto XIV - La Divina Commedia", tag: "Divina Commedia" },
+  { time: "17:18", id: "dKTmwGpxC9g", title: "Inferno - Canto XVII - La Divina Commedia", tag: "Divina Commedia" },
+
+  // ★ 18:00 — SEMEION
+  { time: "17:32", id: "H4YXia6yz-E", title: "Vita medievale - Semeion - 4ª puntata", tag: "Semeion" },
+  { time: "18:07", id: "mwSAxNQ_re0", title: "Società dell'antica Roma - Semeion - 5ª puntata", tag: "Semeion" },
+  { time: "18:46", id: "EUKj2MyULiw", title: "Apocalisse: le ultime parole di Dio", tag: "Sacrum" },
+  { time: "19:36", id: "tmyoBjeOX_g", title: "Misteri dell'antica Grecia - Semeion - 3ª puntata", tag: "Semeion" },
+
+  // ★ 20:00 — DOCUMENTARIO LUNGO
+  { time: "20:05", id: "JURq_FKWOR8", title: "La leggenda della Vera Croce - Piero della Francesca", tag: "Arte & Simboli" },
+
+  // ★ 21:30 — DIVINA COMMEDIA
+  { time: "21:35", id: "9Xo2rV75CBg", title: "Inferno - Canto I - La Divina Commedia", tag: "Divina Commedia" },
+
+  { time: "21:50", id: "GrqPGuz1N-A", title: "Antigone - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+  { time: "22:17", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
+  { time: "22:52", id: "SOqN2uepscY", title: "Eraclito e il fuoco - Philosophia", tag: "Filosofia" },
+  { time: "23:01", id: "uaSEfOUDRDo", title: "Edipo Re - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+  { time: "23:22", id: "MAx6zDUILbQ", title: "Zenone e i suoi paradossi - Philosophia", tag: "Filosofia" },
+  { time: "23:32", id: "eSQcTSW5u50", title: "Alcesti - Euripide - Gli Immortali", tag: "Teatro Greco" },
 ],
 
 5: [ // VENERDÌ
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+
   { time: "08:02", id: "mNbR-hfE2gc", title: "Bronzino - Ritratto di Eleonora di Toledo", tag: "Arte & Simboli" },
   { time: "08:15", id: "VzG3biTZ1rg", title: "Agamennone - Eschilo - Gli Immortali", tag: "Teatro Greco" },
   { time: "08:31", id: "dBcoGyxSSQ0", title: "Donatello - Maddalena penitente", tag: "Arte & Simboli" },
   { time: "08:40", id: "redrKZc2HoY", title: "I simboli dei Pellegrini nel Medioevo", tag: "Storia" },
   { time: "08:48", id: "187m12rc8iE", title: "I simboli delle corporazioni medievali", tag: "Storia" },
+
+  // ★ 09:00 — MITOLOGIA
   { time: "08:58", id: "hU_Bq30AsNM", title: "Europa - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:08", id: "33LYXRz6E5s", title: "Adone - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:18", id: "NGY1ZCjtirA", title: "L'egida, la capra Amaltea e la cornucopia", tag: "Mitologia" },
+
   { time: "09:25", id: "hIJjgqUb-8I", title: "Simbologia del Tondo Doni - Michelangelo", tag: "Arte & Simboli" },
   { time: "09:38", id: "La8RbJbSL6U", title: "Pitagora e i numeri - Philosophia", tag: "Filosofia" },
+
+  // ★ 10:00 — PHILOSOPHIA
   { time: "09:45", id: "SOqN2uepscY", title: "Eraclito e il fuoco - Philosophia", tag: "Filosofia" },
   { time: "09:54", id: "9BETjtp1mbA", title: "Parmenide e l'Essere - Philosophia", tag: "Filosofia" },
+
   { time: "10:01", id: "n3J2zHslid4", title: "Simbologia del Peccato Originale e Cacciata dal Paradiso - Michelangelo", tag: "Arte & Simboli" },
   { time: "10:24", id: "5BJaK2Nv3L0", title: "Empedocle e i quattro elementi - Philosophia", tag: "Filosofia" },
   { time: "10:32", id: "KvpEM4bgfZY", title: "Anassagora e il Nous - Philosophia", tag: "Filosofia" },
+
+  // ★ 11:00 — TEATRO GRECO
   { time: "10:40", id: "EhsO8Dea9yM", title: "Ecuba - Euripide - Gli Immortali", tag: "Teatro Greco" },
+
   { time: "11:25", id: "ktou5tayO18", title: "Simbologia del Giudizio Universale di Michelangelo", tag: "Arte & Simboli" },
   { time: "11:46", id: "vjejY2-VCFA", title: "Simbologia delle Sibille alla Cappella Sistina - Michelangelo", tag: "Arte & Simboli" },
   { time: "12:07", id: "gW7A_NVA8h8", title: "Simbologia della Creazione di Adamo - Michelangelo", tag: "Arte & Simboli" },
@@ -757,53 +892,79 @@ const schedules = {
   { time: "13:28", id: "J47HGIAt7H0", title: "Giosuè ferma il sole - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "13:36", id: "abUpEQBf1b0", title: "Mene, Tekel, Peres - la mano fantasma - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "13:46", id: "a_sJka5SgjI", title: "Il dono di re Salomone - Storie dalla Bibbia", tag: "Sacrum" },
+
+  // ★ 14:00 — SIMBOLI NELL'ARTE
   { time: "13:54", id: "SAKj-fXPTig", title: "Significati dei simboli nella Camera degli Sposi - Andrea Mantegna", tag: "Arte & Simboli" },
+
   { time: "14:34", id: "zzbcMM2Bm8k", title: "Significati nascosti nel Parnaso - Andrea Mantegna", tag: "Arte & Simboli" },
   { time: "15:01", id: "FyOCxDBzYIE", title: "Simbologia delle sette Virtù - Pollaiolo e Botticelli", tag: "Arte & Simboli" },
   { time: "15:34", id: "wStQPVyWzuM", title: "Decameron - Ser Ciappelletto - I giornata I novella", tag: "Decameron" },
+
+  // ★ 16:00 — SACRUM
   { time: "15:49", id: "TvY6zNfDhqo", title: "Debora e l'incontro di Sisara e Giaele - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "15:56", id: "YDGpLW-lSrc", title: "Madian e i 300 di Gedeone - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:11", id: "BLDB2zuKUhA", title: "Eliseo, la vedova e l'olio - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:18", id: "dESyuomRI3E", title: "I profeti di Baal e il doppio olocausto - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:28", id: "_CrCTW4W41A", title: "Susanna e i vecchioni - Storie dalla Bibbia", tag: "Sacrum" },
+
+  // ★ 17:00 — DECAMERON
   { time: "16:39", id: "egeEdEQFkT8", title: "Decameron - Il monaco e l'abate - I giornata IV novella", tag: "Decameron" },
   { time: "16:51", id: "Ukb7enwrhmU", title: "Decameron - Martellino e il finto miracolo", tag: "Decameron" },
   { time: "17:01", id: "5D0qcufRzOw", title: "Decameron - Bergamino e l'avarizia di Cangrande", tag: "Decameron" },
   { time: "17:13", id: "TjARMj13bPE", title: "Decameron - Il corsaro Landolfo e la cassetta", tag: "Decameron" },
   { time: "17:22", id: "aWlHf7nx3Z8", title: "Decameron - San Giuliano, il mercante e la vedovella", tag: "Decameron" },
+
+  // ★ 18:00 — SEMEION
   { time: "17:31", id: "hPWQR2BU49Y", title: "Religioni del Mediterraneo - Semeion - 6ª puntata", tag: "Semeion" },
   { time: "18:05", id: "eX13aqoGOqU", title: "Il mito dei Fenici - Semeion - 7ª puntata", tag: "Semeion" },
   { time: "18:40", id: "LQVOt5DGEbc", title: "Giustiniano e il Corteo di Teodora in San Vitale", tag: "Arte & Simboli" },
   { time: "19:09", id: "q8-VMJW1r80", title: "Il tavolo - Sign&Design - 2ª puntata", tag: "Design" },
+
+  // ★ 20:00 — DOCUMENTARIO LUNGO
   { time: "19:38", id: "8f5m0M3rmIA", title: "Giotto - Storie di San Francesco - Assisi - I Simboli nell'Arte", tag: "Arte & Simboli" },
-  { time: "20:48", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
-  { time: "21:23", id: "npJLE6PpIYU", title: "Inferno - Canto VI - La Divina Commedia", tag: "Divina Commedia" },
-  { time: "21:35", id: "tmyoBjeOX_g", title: "Misteri dell'antica Grecia - Semeion - 3ª puntata", tag: "Semeion" },
-  { time: "22:04", id: "4JhzDRygmAI", title: "I consigli di Cicerone - il valore dell'amicizia", tag: "Letteratura" },
-  { time: "22:09", id: "vGut7h5Wlwc", title: "Orazio - Carpe Diem, afferra l'attimo", tag: "Poesia" },
-  { time: "22:13", id: "j-QqaWgK3rA", title: "I consigli di Marco Aurelio - Il giusto atteggiamento", tag: "Letteratura" },
-  { time: "22:19", id: "eSQcTSW5u50", title: "Alcesti - Euripide - Gli Immortali", tag: "Teatro Greco" },
-  { time: "22:46", id: "H4YXia6yz-E", title: "Vita medievale - Semeion - 4ª puntata", tag: "Semeion" },
-  { time: "23:21", id: "1zSwyFPn4Yk", title: "Socrate - Philosophia", tag: "Filosofia" },
-  { time: "23:30", id: "GrqPGuz1N-A", title: "Antigone - Sofocle - Gli Immortali", tag: "Teatro Greco" },
+
+  { time: "20:23", id: "GFUEEsgNIAU", title: "Significati nascosti nella Primavera - Sandro Botticelli", tag: "Arte & Simboli" },
+  { time: "20:58", id: "Vxbslrddq_c", title: "Maestro Venceslao - Dicembre nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
+
+  // ★ 21:30 — DIVINA COMMEDIA
+  { time: "21:13", id: "npJLE6PpIYU", title: "Inferno - Canto VI - La Divina Commedia", tag: "Divina Commedia" },
+
+  { time: "21:25", id: "tmyoBjeOX_g", title: "Misteri dell'antica Grecia - Semeion - 3ª puntata", tag: "Semeion" },
+  { time: "21:54", id: "4JhzDRygmAI", title: "I consigli di Cicerone - il valore dell'amicizia", tag: "Letteratura" },
+  { time: "21:59", id: "vGut7h5Wlwc", title: "Orazio - Carpe Diem, afferra l'attimo", tag: "Poesia" },
+  { time: "22:03", id: "j-QqaWgK3rA", title: "I consigli di Marco Aurelio - Il giusto atteggiamento", tag: "Letteratura" },
+  { time: "22:09", id: "eSQcTSW5u50", title: "Alcesti - Euripide - Gli Immortali", tag: "Teatro Greco" },
+  { time: "22:36", id: "H4YXia6yz-E", title: "Vita medievale - Semeion - 4ª puntata", tag: "Semeion" },
+  { time: "23:11", id: "1zSwyFPn4Yk", title: "Socrate - Philosophia", tag: "Filosofia" },
+  { time: "23:20", id: "GrqPGuz1N-A", title: "Antigone - Sofocle - Gli Immortali", tag: "Teatro Greco" },
 ],
 
 6: [ // SABATO
   { time: "08:00", id: "nRrWSTaabeQ", title: "Inizio trasmissioni", tag: "ARS EUROPA TV" },
+ 
   { time: "08:02", id: "yUEMOT8J8KU", title: "Giandomenico Tiepolo - Scena di Carnevale - Il minuetto", tag: "Arte & Simboli" },
   { time: "08:18", id: "mVOIPZpLdDk", title: "Sandro Botticelli - Madonna col Bambino e due angeli", tag: "Arte & Simboli" },
   { time: "08:32", id: "s6QnfgVPxZA", title: "I simboli dell'alchimia nel Medioevo", tag: "Storia" },
   { time: "08:40", id: "Vxbslrddq_c", title: "Maestro Venceslao - Dicembre nel Ciclo dei Mesi di Torre Aquila", tag: "Arte & Simboli" },
+ 
+  // ★ 09:00 — MITOLOGIA
   { time: "08:52", id: "8RHc0dwAVmE", title: "Orfeo - Simboli, miti e leggende", tag: "Mitologia" },
   { time: "09:07", id: "1zXxvYDhG4o", title: "Psiche - Simboli, miti e leggende", tag: "Mitologia" },
+ 
   { time: "09:25", id: "k51U0SrGnN4", title: "Significati segreti della Pala Montefeltro - Piero della Francesca", tag: "Arte & Simboli" },
-  { time: "09:46", id: "S80kNQbbpNk", title: "Anassimandro e l'apeiron - I Presocratici - Philosophia", tag: "Filosofia" },
+  { time: "09:46", id: "S80kNQbbpNk", title: "Anassimandro e l'apeiron - Philosophia", tag: "Filosofia" },
+ 
+  // ★ 10:00 — PHILOSOPHIA
   { time: "09:57", id: "5coSTdhVpuU", title: "Platone - Philosophia", tag: "Filosofia" },
   { time: "10:10", id: "oqTUTClIW2I", title: "Aristotele - Philosophia", tag: "Filosofia" },
+ 
   { time: "10:19", id: "WKNbx0R0UA4", title: "Hans Memling - Passione di Cristo", tag: "Arte & Simboli" },
   { time: "10:31", id: "xCTDCGDexz4", title: "Jacopo di Cione - Polittico di San Pier Maggiore", tag: "Arte & Simboli" },
   { time: "10:51", id: "1zSwyFPn4Yk", title: "Socrate - Philosophia", tag: "Filosofia" },
+ 
+  // ★ 11:00 — TEATRO GRECO
   { time: "11:00", id: "_5mO9eF7OzA", title: "Ifigenia in Tauride - Euripide - Gli Immortali", tag: "Teatro Greco" },
+ 
   { time: "11:48", id: "5-BgoO5nwyM", title: "Andrea Mantegna - I trionfi di Giulio Cesare", tag: "Arte & Simboli" },
   { time: "12:10", id: "QcN8IL5cGiI", title: "Crisippo e lo Stoicismo - Philosophia", tag: "Filosofia" },
   { time: "12:23", id: "MYEi1LhYlo4", title: "Protagora e le antilogie - Philosophia", tag: "Filosofia" },
@@ -812,17 +973,24 @@ const schedules = {
   { time: "13:12", id: "OIbMcxEIubc", title: "Giovanni di Paolo - Madonna col Bambino e Santi", tag: "Arte & Simboli" },
   { time: "13:25", id: "ElM7rPK06k8", title: "Decameron - Come mandare il diavolo all'inferno - III giornata X novella", tag: "Decameron" },
   { time: "13:36", id: "g6kgO00YunM", title: "Simbologia della Cena in Emmaus - Caravaggio", tag: "Arte & Simboli" },
+ 
+  // ★ 14:00 — SIMBOLI NELL'ARTE
   { time: "13:54", id: "gJQIVbPVYx8", title: "Simbologia dell'Ultima Cena - Leonardo da Vinci", tag: "Arte & Simboli" },
+ 
   { time: "14:43", id: "Db4RoAnOmQs", title: "Significati nascosti nella Madonna dei Pellegrini - Caravaggio", tag: "Arte & Simboli" },
   { time: "14:57", id: "-76Y7rX1q3U", title: "Significati nascosti in Bacco - Caravaggio", tag: "Arte & Simboli" },
   { time: "15:11", id: "hnhA6JNWnZI", title: "Significato del Sacrificio di Isacco - Caravaggio", tag: "Arte & Simboli" },
   { time: "15:21", id: "rqf8m8WaTLM", title: "Simbologia di San Matteo e l'angelo - Caravaggio", tag: "Arte & Simboli" },
   { time: "15:41", id: "_noxbELcGdc", title: "Simbologia del Pantheon di Roma", tag: "Storia" },
+ 
+  // ★ 16:00 — SACRUM
   { time: "15:47", id: "jeHmaJmp3wg", title: "Nehusthan, il serpente di bronzo - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "15:55", id: "7leFAVmV71Y", title: "Nehusthan - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:01", id: "CJIyeaOe1M8", title: "I simboli sacri nel Medioevo", tag: "Storia" },
   { time: "16:10", id: "HkBxKcbf3hE", title: "Tobiolo e l'Angelo - Storie dalla Bibbia", tag: "Sacrum" },
   { time: "16:35", id: "JlDzVj7QrZM", title: "Samuele e la voce misteriosa - Storie dalla Bibbia", tag: "Sacrum" },
+ 
+  // ★ 17:00 — DECAMERON
   { time: "16:45", id: "9K_bfj937Pg", title: "Decameron - Un mercante ebreo in Vaticano - I giornata II novella", tag: "Decameron" },
   { time: "16:57", id: "PeDzAGHnkLw", title: "Decameron - Il frate avido e la brodaglia dei poveri", tag: "Decameron" },
   { time: "17:06", id: "8tkD5HhoxYM", title: "Decameron - Chichibìo e la gru - VI giornata IV novella", tag: "Decameron" },
@@ -830,13 +998,20 @@ const schedules = {
   { time: "17:24", id: "9e4uCJAmljA", title: "Decameron - La dama di Guascogna e il re di Cipro", tag: "Decameron" },
   { time: "17:29", id: "T9m9cm0dhWY", title: "Decameron - Come attaccare la coda a una cavalla - IX giornata X novella", tag: "Decameron" },
   { time: "17:41", id: "Vjes7xPZgo0", title: "Decameron - Calandrino incinto - IX giornata III novella", tag: "Decameron" },
+ 
+  // ★ 18:00 — SEMEION
   { time: "17:53", id: "2eNrA0pvehA", title: "La sedia - Sign&Design - 1ª puntata", tag: "Design" },
   { time: "18:31", id: "IjEmsqnsHKY", title: "L'invincibile esercito romano - Semeion", tag: "Semeion" },
   { time: "19:01", id: "WWy3GpSwbk0", title: "Simbologia del Martirio di San Matteo - Caravaggio", tag: "Arte & Simboli" },
   { time: "19:32", id: "EsbBvV7sU1k", title: "Simbologia di Riposo durante la fuga in Egitto - Caravaggio", tag: "Arte & Simboli" },
   { time: "19:45", id: "_rfdWloavPE", title: "Simbologia della Natività con i santi Lorenzo e Francesco - Caravaggio", tag: "Arte & Simboli" },
+ 
+  // ★ 20:00 — DOCUMENTARIO LUNGO
   { time: "20:01", id: "JURq_FKWOR8", title: "La leggenda della Vera Croce - Piero della Francesca", tag: "Arte & Simboli" },
+ 
   { time: "21:31", id: "FSYp-TK2qEk", title: "Inferno - Canto VIII - La Divina Commedia", tag: "Divina Commedia" },
+ 
+  // ★ 21:30 — DIVINA COMMEDIA (il canto precede di qualche minuto per raccordo)
   { time: "21:42", id: "SAKj-fXPTig", title: "Significati dei simboli nella Camera degli Sposi - Andrea Mantegna", tag: "Arte & Simboli" },
   { time: "22:22", id: "3aUGhajRXBA", title: "Simbologia della Messa di Bolsena - Raffaello", tag: "Arte & Simboli" },
   { time: "22:40", id: "wO56CDW3m-g", title: "Simbologia de La liberazione di san Pietro - Raffaello", tag: "Arte & Simboli" },
@@ -845,7 +1020,7 @@ const schedules = {
   { time: "23:18", id: "i4hB8HMOSW8", title: "Giovanni Bellini - Polittico di San Vincenzo Ferrer", tag: "Arte & Simboli" },
   { time: "23:36", id: "PbHxVDjfYW4", title: "Significati nascosti nella Allegoria Sacra - Giovanni Bellini", tag: "Arte & Simboli" },
 ],
-};
+ };
 
   const schedule = schedules[today] || schedules[1];
 
