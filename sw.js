@@ -67,6 +67,21 @@ self.addEventListener('fetch', event => {
     );
     return;
   }
+  /* Palinsesto e cataloghi dati — network-first, sempre aggiornati */
+  if (url.includes('palinsesto.js') || url.includes('catalogo') || url.includes('.json')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          if (response && response.ok) {
+            const clone = response.clone();
+            caches.open(CACHE_NAME).then(cache => cache.put(event.request, clone));
+          }
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
   /* Navigazione (HTML) — network-first con fallback alla cache */
   if (event.request.mode === 'navigate') {
     event.respondWith(
