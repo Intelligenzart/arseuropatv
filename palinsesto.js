@@ -1,7 +1,6 @@
-// Palinsesto settimanale ARS EUROPA TV - Settimana 2 (versione corretta)
-// Simboli nell'arte incluso per intero (140 video) e molto piu' frequente lungo la giornata
-// Nessuna etichetta di replica: il catalogo intero e' stato riutilizzato per dare massimo spazio a Simboli nell'arte
-const palinsesto = {
+// Palinsesto settimanale ARS EUROPA TV - Settimana 2
+// Catalogo intero, Simboli nell'arte molto frequente
+const schedules = {
   0: [ // DOMENICA
     { time: "07:58", id: "nRrWSTaabeQ", title: 'Inizio delle trasmissioni', tag: 'ARS EUROPA TV' },
     { time: "08:00", id: "_RqV9r-Wm74", title: 'Lo Spirito Santo nel Cristianesimo', tag: 'Sacrum' },
@@ -401,5 +400,3 @@ const palinsesto = {
     { time: "23:43", id: "u-dUGWo5NoM", title: 'Maestro Venceslao - Luglio nel Ciclo dei Mesi di Torre Aquila', tag: 'Capolavori' },
   ],
 };
-
-export default palinsesto;
