@@ -169,7 +169,8 @@
     pointer-events: none;
   }
 
-  .hero-content { position: relative; z-index: 2; padding: 0 2.5rem 3.5rem; max-width: 780px; }
+  .hero-content { position: relative; z-index: 2; padding: 0 2.5rem 3.5rem; max-width: 780px; pointer-events: none; }
+  .hero-actions { display: flex; align-items: center; gap: 1.2rem; flex-wrap: wrap; pointer-events: auto; }
 
   .hero-eyebrow { font-family: 'Space Mono', monospace; font-size: 0.65rem; letter-spacing: 0.3em; color: var(--gold-bright); text-transform: uppercase; margin-bottom: 1rem; }
 
@@ -439,7 +440,7 @@
     loadedIndex = current.index;
     player = new YT.Player('player', {
       videoId: current.id,
-      playerVars: { autoplay: 1, controls: 1, modestbranding: 1, rel: 0 },
+      playerVars: { autoplay: 1, mute: 1, controls: 1, modestbranding: 1, rel: 0, playsinline: 1 },
       events: {
         onReady: function (e) {
           const now = new Date();
