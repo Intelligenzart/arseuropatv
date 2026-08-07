@@ -241,7 +241,7 @@
     background: var(--card);
     border: 1px solid var(--border);
     scroll-snap-align: start;
-    cursor: default;
+    cursor: pointer;
     overflow: hidden;
     transition: transform 0.22s ease, border-color 0.22s ease;
   }
@@ -269,6 +269,48 @@
   .card-time { font-family: 'Space Mono', monospace; font-size: 0.6rem; color: var(--gold); letter-spacing: 0.08em; }
 
   .no-program { padding: 3rem 2.5rem; text-align: center; color: var(--muted); font-family: 'Fraunces', serif; font-style: italic; font-size: 1.1rem; line-height: 1.8; }
+
+  /* ---------- SCHEDA DETTAGLIO ---------- */
+  .detail-overlay {
+    display: none;
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(6,7,11,0.8);
+    align-items: center; justify-content: center;
+    padding: 1.5rem;
+  }
+  .detail-overlay.visible { display: flex; }
+
+  .detail-panel {
+    position: relative;
+    width: 100%; max-width: 560px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    max-height: 88vh;
+    overflow-y: auto;
+  }
+
+  .detail-thumb { width: 100%; aspect-ratio: 16/9; object-fit: cover; display: block; background: #000; }
+
+  .detail-close {
+    position: absolute; top: 0.6rem; right: 0.6rem; z-index: 2;
+    background: rgba(6,7,11,0.7); color: var(--paper);
+    border: none; width: 30px; height: 30px; border-radius: 50%;
+    font-size: 1.1rem; line-height: 1; cursor: pointer;
+  }
+  .detail-close:hover { background: rgba(6,7,11,0.95); }
+
+  .detail-body { padding: 1.4rem 1.6rem 1.6rem; }
+
+  .detail-title {
+    font-family: 'Fraunces', serif; font-style: italic; font-weight: 500;
+    font-size: 1.3rem; line-height: 1.25; color: var(--paper);
+    margin-bottom: 0.8rem;
+  }
+
+  .detail-meta { display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1rem; }
+
+  .detail-desc { font-family: 'Inter', sans-serif; font-size: 0.9rem; line-height: 1.6; color: var(--muted); margin-bottom: 1.3rem; }
+  .detail-desc.placeholder { font-style: italic; }
 
   footer { padding: 2rem 2.5rem 3rem; text-align: center; font-family: 'Fraunces', serif; font-style: italic; font-size: 0.85rem; color: var(--muted); }
 
@@ -327,6 +369,21 @@
 <main id="rows"></main>
 
 <footer>La programmazione scorre automaticamente secondo il palinsesto.</footer>
+
+<div class="detail-overlay" id="detailOverlay" onclick="if(event.target===this) closeDetail()">
+  <div class="detail-panel">
+    <button class="detail-close" onclick="closeDetail()" aria-label="Chiudi">&times;</button>
+    <img class="detail-thumb" id="detailThumb" src="" alt="">
+    <div class="detail-body">
+      <div class="hero-title detail-title" id="detailTitle"></div>
+      <div class="hero-meta detail-meta">
+        <div class="hero-time" id="detailTime"></div>
+        <div class="hero-tag" id="detailTag"></div>
+      </div>
+      <div class="detail-desc" id="detailDesc"></div>
+    </div>
+  </div>
+</div>
 
 <script src="palinsesto.js"></script>
 <script>
@@ -518,7 +575,7 @@
         const isActive = item.idx === activeIdx;
         const thumb = 'https://img.youtube.com/vi/' + item.id + '/hqdefault.jpg';
         return `
-          <div class="card${isActive ? ' active' : ''}${isPast && !isActive ? ' past' : ''}">
+          <div class="card${isActive ? ' active' : ''}${isPast && !isActive ? ' past' : ''}" onclick="openDetail(${item.idx})">
             <img class="card-thumb" src="${thumb}" alt="" loading="lazy">
             ${isActive ? '<div class="card-live">&#9654; in onda</div>' : ''}
             <div class="card-info">
@@ -542,6 +599,37 @@
     const activeCard = main.querySelector('.card.active');
     if (activeCard) activeCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   }
+
+  /* ===================================================
+     SCHEDA DI DETTAGLIO
+  =================================================== */
+  function openDetail(idx) {
+    const item = schedule[idx];
+    if (!item) return;
+    document.getElementById('detailThumb').src = 'https://img.youtube.com/vi/' + item.id + '/hqdefault.jpg';
+    document.getElementById('detailTitle').textContent = item.title;
+    document.getElementById('detailTime').textContent = item.time;
+    document.getElementById('detailTag').textContent = item.tag || '';
+
+    const descEl = document.getElementById('detailDesc');
+    if (item.description) {
+      descEl.textContent = item.description;
+      descEl.style.display = 'block';
+    } else {
+      descEl.textContent = '';
+      descEl.style.display = 'none';
+    }
+
+    document.getElementById('detailOverlay').classList.add('visible');
+  }
+
+  function closeDetail() {
+    document.getElementById('detailOverlay').classList.remove('visible');
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeDetail();
+  });
 
   function updateClock() {
     document.getElementById('clock').textContent = new Date().toLocaleTimeString('it-IT');
