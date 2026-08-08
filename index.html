@@ -558,6 +558,15 @@
     return map;
   }
 
+  function scrollRowToTarget(trackEl, cardEl) {
+    if (!cardEl) return;
+    const paddingLeft = parseFloat(getComputedStyle(trackEl).paddingLeft) || 0;
+    const trackRect = trackEl.getBoundingClientRect();
+    const cardRect = cardEl.getBoundingClientRect();
+    const offset = (cardRect.left - trackRect.left) + trackEl.scrollLeft - paddingLeft;
+    trackEl.scrollLeft = Math.max(0, offset);
+  }
+
   function renderRows(activeIdx) {
     const main = document.getElementById('rows');
     main.innerHTML = '';
@@ -569,10 +578,14 @@
     const grouped = groupByTag(schedule);
 
     grouped.forEach((items, tag) => {
-      const cardsHtml = items.map(item => {
+      let targetIdx = 0;
+      let foundUpcoming = false;
+
+      const cardsHtml = items.map((item, i) => {
         const nextMin = item.idx + 1 < schedule.length ? parseTime(schedule[item.idx + 1].time) : 24 * 60;
         const isPast = nowMin >= nextMin;
         const isActive = item.idx === activeIdx;
+        if (!isPast && !foundUpcoming) { targetIdx = i; foundUpcoming = true; }
         const thumb = 'https://img.youtube.com/vi/' + item.id + '/hqdefault.jpg';
         return `
           <div class="card${isActive ? ' active' : ''}${isPast && !isActive ? ' past' : ''}" onclick="openDetail(${item.idx})">
@@ -585,6 +598,8 @@
           </div>`;
       }).join('');
 
+      if (!foundUpcoming) targetIdx = items.length - 1;
+
       const section = document.createElement('div');
       section.className = 'row';
       section.innerHTML = `
@@ -594,6 +609,10 @@
         </div>
         <div class="row-track">${cardsHtml}</div>`;
       main.appendChild(section);
+
+      const trackEl = section.querySelector('.row-track');
+      const cardEls = trackEl.querySelectorAll('.card');
+      scrollRowToTarget(trackEl, cardEls[targetIdx]);
     });
 
     const activeCard = main.querySelector('.card.active');
