@@ -614,9 +614,6 @@
       const cardEls = trackEl.querySelectorAll('.card');
       scrollRowToTarget(trackEl, cardEls[targetIdx]);
     });
-
-    const activeCard = main.querySelector('.card.active');
-    if (activeCard) activeCard.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
   }
 
   /* ===================================================
